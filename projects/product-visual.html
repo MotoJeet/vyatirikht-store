@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Product Visual - Commercial - CineTorqueFilms</title>
+
+<link rel="stylesheet" href="../CSS/style.css">
+<link rel="stylesheet" href="../CSS/layout.css">
+<link rel="stylesheet" href="../CSS/project-detail.css">
+<link rel="stylesheet" href="../CSS/CardNav.css">
+
+
+</head>
+
+<body>
+
+<div class="card-nav-container">
+  <nav class="card-nav" id="mainCardNav">
+    <div class="card-nav-top">
+      <a href="../index.html" class="card-nav-logo">
+        <img src="../assets/images/Hero-logo.png" alt="CineTorqueFilms Logo">
+      </a>
+      <!-- Home Icon Link -->
+      <a href="../index.html" class="card-nav-home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </a>
+      <div class="card-nav-hamburger" id="cardNavToggle">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="card-nav-content" id="cardNavContent">
+      <div class="nav-card" style="background-color: #2a2a2a; color: #fff;">
+        <div class="nav-card-label">Work</div>
+        <div class="nav-card-links">
+          <a href="../portfolio.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Portfolio
+          </a>
+          <a href="../portfolio.html#cinematics" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Movies
+          </a>
+        </div>
+      </div>
+      <div class="nav-card" style="background-color: #333; color: #fff;">
+        <div class="nav-card-label">Learn</div>
+        <div class="nav-card-links">
+          <a href="../tutorials.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Tutorials
+          </a>
+          <a href="../camera-simulator.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Simulator
+          </a>
+          <a href="../storyboard.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Storyboard
+          </a>
+        </div>
+      </div>
+      <div class="nav-card" style="background-color: #d4af37; color: #000;">
+        <div class="nav-card-label">Community</div>
+        <div class="nav-card-links">
+          <a href="../about.html" class="nav-card-link" style="color: #000;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            About Us
+          </a>
+          <a href="../faq.html" class="nav-card-link" style="color: #000;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            FAQ
+          </a>
+          <a href="../contact.html" class="nav-card-link" style="color: #000;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<section class="project-hero">
+
+<div class="video-container">
+<video id="mainProjectVideo" controls autoplay muted loop playsinline>
+<source src="../assets/Cinematics/sony-a6700.mp4" type="video/mp4">
+</video>
+
+<!-- Director's Commentary Overlay text -->
+<div id="commentaryOverlay" class="commentary-overlay hidden">
+  <div class="commentary-box">
+    <h3>Director's Commentary</h3>
+    <p><strong>Why this shot:</strong> We needed to showcase the sleek, metallic body of the Sony A6700 while maintaining a moody, premium commercial aesthetic.</p>
+    <p><strong>Camera Setup:</strong> RED Komodo 6K with Laowa 24mm Probe Lens.</p>
+    <p><strong>Lighting:</strong> Studio setup using Aputure 300d with a softbox and negative fill to carve out the edges of the camera.</p>
+    <p><strong>Mistakes & Fixes:</strong> Reflections on the camera lens were too harsh initially. We flagged off the light source and used a polarizer to control the glare.</p>
+  </div>
+</div>
+
+</div>
+
+<div class="project-header-info">
+  <h1>Product Visual</h1>
+  <p>Commercial</p>
+  
+  <div class="commentary-toggle">
+    <span>Enable Director's Commentary</span>
+    <label class="switch">
+      <input type="checkbox" id="commentaryToggleSwitch">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>
+
+</section>
+
+
+<section class="scene-breakdown">
+
+  <h2>Scene Breakdown</h2>
+  <p class="section-desc">Understand how this short film was built out of specific technical shots.</p>
+  
+  <div class="breakdown-grid">
+  
+    <div class="breakdown-item">
+      <div class="breakdown-video-wrap">
+        <video autoplay muted loop playsinline>
+          <source src="../assets/Cinematics/sony-a6700.mp4" type="video/mp4">
+        </video>
+        <span class="shot-badge">Hero Shot</span>
+      </div>
+      <div class="breakdown-text">
+        <h3>Main Product Focus</h3>
+        <p>A centered, perfectly lit shot of the product to establish its premium build and immediately capture attention.</p>
+      </div>
+    </div>
+    
+    <div class="breakdown-item">
+      <div class="breakdown-video-wrap">
+        <video autoplay muted loop playsinline>
+          <source src="../assets/Cinematics/sony-a6700.mp4" type="video/mp4">
+        </video>
+        <span class="shot-badge">Detail Shot</span>
+      </div>
+      <div class="breakdown-text">
+        <h3>Macro Textures</h3>
+        <p>Getting extremely close to highlight the material textures, dials, and precision engineering of the product.</p>
+      </div>
+    </div>
+    
+    <div class="breakdown-item">
+      <div class="breakdown-video-wrap">
+        <video autoplay muted loop playsinline>
+          <source src="../assets/Cinematics/sony-a6700.mp4" type="video/mp4">
+        </video>
+        <span class="shot-badge">Motion Shot</span>
+      </div>
+      <div class="breakdown-text">
+        <h3>Dynamic Panning</h3>
+        <p>Smoothly rotating the camera around the product to reveal its three-dimensional shape and interactive parts.</p>
+      </div>
+    </div>
+  
+  </div>
+
+</section>
+
+
+<footer>
+
+<p>CineTorqueFilms © 2026</p>
+<p class="credits">Website designed & developed by Jitendra Kulkarni</p>
+
+</footer>
+
+  <!-- GSAP Core and ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script src="../JS/SplitText.js"></script>
+  <script src="../JS/ClickSpark.js"></script>
+  <script src="../JS/script.js"></script>
+
+</body>
+</html>

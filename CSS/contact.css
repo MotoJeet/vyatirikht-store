@@ -1,0 +1,119 @@
+/* Contact Page Layout */
+
+.contact-page{
+min-height:80vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:160px 20px 120px;
+max-width:800px;
+margin:auto;
+animation:contactFade 0.8s ease;
+}
+
+/* Title */
+
+.contact-page h1{
+margin-bottom:12px;
+letter-spacing:-0.03em;
+}
+
+/* Subtitle */
+
+.contact-subtext{
+opacity:.7;
+max-width:520px;
+margin-bottom:50px;
+line-height:1.6;
+}
+
+/* Buttons Container */
+
+.contact-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+justify-content:center;
+}
+
+/* Contact Buttons */
+
+.contact-btn{
+padding:16px 38px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.15);
+text-decoration:none;
+color:white;
+font-family: var(--font-heading);
+font-weight:600;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-size: 14px;
+transition:all .3s cubic-bezier(0.19, 1, 0.22, 1);
+background:rgba(255,255,255,0.03);
+backdrop-filter: blur(10px);
+}
+
+.contact-btn:hover{
+background: var(--accent-gradient);
+color: white;
+border-color: transparent;
+transform:translateY(-4px);
+box-shadow: var(--accent-glow);
+}
+
+/* Contact note */
+
+.contact-note{
+margin-top:25px;
+opacity:.5;
+font-size:14px;
+}
+
+/* Divider line */
+
+.contact-page::after{
+content:"";
+display:block;
+width:80px;
+height:3px;
+background: var(--accent-gradient);
+border-radius: 4px;
+box-shadow: var(--accent-glow);
+margin-top:60px;
+}
+
+/* Entry Animation */
+
+@keyframes contactFade{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@media (max-width:600px){
+
+.contact-btn{
+width:100%;
+}
+
+.contact-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+.cinematic-card{
+cursor:pointer;
+}

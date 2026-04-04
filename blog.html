@@ -8,11 +8,148 @@
 
 <title>Blog - CineTorqueFilms</title>
 
-
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="CSS/layout.css">
-  <link rel="stylesheet" href="CSS/CardNav.css">
+
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="CSS/layout.css">
+<link rel="stylesheet" href="CSS/CardNav.css">
+
+<style>
+
+/* ===== BLOG PAGE ===== */
+
+.blog-page{
+max-width:1200px;
+margin:auto;
+padding:140px 20px 80px;
+text-align:center;
+}
+
+.blog-intro{
+opacity:.7;
+margin-bottom:60px;
+}
+
+/* ===== FEATURED ===== */
+
+.featured-post{
+position:relative;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:80px;
+cursor:pointer;
+}
+
+.featured-post img{
+width:100%;
+transition:all .6s ease;
+}
+
+.featured-post:hover img{
+transform:scale(1.05);
+filter:brightness(0.8);
+}
+
+/* ===== BLOG GRID ===== */
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* ===== CARD ===== */
+
+.blog-card{
+position:relative;
+border-radius:18px;
+overflow:hidden;
+cursor:pointer;
+text-decoration:none;
+color:white;
+transition:.3s ease;
+}
+
+/* image */
+
+.blog-card img{
+width:100%;
+display:block;
+transition:all .6s ease;
+}
+
+/* hover zoom */
+
+.blog-card:hover img{
+transform:scale(1.1);
+filter:brightness(0.7);
+}
+
+/* hover lift */
+
+.blog-card:hover{
+transform:translateY(-6px);
+}
+
+/* glow */
+
+.blog-card::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+width:120%;
+height:120%;
+transform:translate(-50%,-50%);
+background:radial-gradient(circle, rgba(255,80,120,.35), transparent 70%);
+filter:blur(60px);
+opacity:0;
+transition:.4s;
+z-index:-1;
+}
+
+.blog-card:hover::before{
+opacity:.6;
+}
+
+/* ===== OVERLAY TEXT ===== */
+
+.overlay-info{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:20px;
+background:linear-gradient(transparent, rgba(0,0,0,.9));
+transform:translateY(100%);
+opacity:0;
+transition:.4s ease;
+text-align:left;
+}
+
+/* show on hover */
+
+.blog-card:hover .overlay-info{
+transform:translateY(0);
+opacity:1;
+}
+
+/* featured always visible */
+
+.featured-post .overlay-info{
+transform:none;
+opacity:1;
+}
+
+/* safety fix */
+
+section{
+opacity:1 !important;
+transform:none !important;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -37,18 +174,20 @@ Thoughts on filmmaking, motion, and cinematic storytelling.
 </p>
 
 
-<!-- FEATURED POST -->
+<!-- FEATURED -->
 
 <div class="featured-post">
-<a href="<h3>post-camera-basics-101.html</h3>
-<p>Master the fundamentals of exposure, focus, and motion.</p>
- <p class="meta">By CineTorqueFilms • 5 min read</p>
+
+<a href="post-camera-basics-101.html">
+
 <img src="assets/images/Model-1.jpg" alt="Featured">
 
 <div class="overlay-info">
 <h2>How I Shoot Cinematic Motorcycle Videos</h2>
 <p>Breaking down my workflow, gear, and shooting style.</p>
 </div>
+
+</a>
 
 </div>
 
@@ -81,6 +220,30 @@ Thoughts on filmmaking, motion, and cinematic storytelling.
 </div>
 </a>
 
+<a href="#" class="blog-card">
+<img src="assets/images/blog5.jpg">
+<div class="overlay-info">
+<h3>Low Light Cinematics</h3>
+<p>How to shoot clean night footage.</p>
+</div>
+</a>
+
+<a href="#" class="blog-card">
+<img src="assets/images/blog6.jpg">
+<div class="overlay-info">
+<h3>Bike Tracking Shots</h3>
+<p>Capture motion like a pro.</p>
+</div>
+</a>
+
+<a href="#" class="blog-card">
+<img src="assets/images/blog7.jpg">
+<div class="overlay-info">
+<h3>Color Grading Basics</h3>
+<p>Make your footage cinematic.</p>
+</div>
+</a>
+
 </div>
 
 </section>
@@ -92,11 +255,27 @@ Thoughts on filmmaking, motion, and cinematic storytelling.
 <p class="credits">Website designed & developed by Jitendra Kulkarni</p>
 
 </footer>
-  
+
+
+<!-- GSAP -->
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="JS/SplitText.js"></script>
-  <script src="JS/script.js"></script>
+
+<script>
+
+/* card animation */
+
+gsap.from(".blog-card", {
+opacity: 0,
+y: 40,
+duration: 0.8,
+stagger: 0.15,
+ease: "power3.out"
+})
+
+</script>
+
+<script src="JS/script.js"></script>
 
 </body>
 </html>

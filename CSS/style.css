@@ -207,6 +207,10 @@ footer {
     line-height: 2rem;
 }
 
+.blog-post h2 {
+  margin-top: 40px;
+}
+
 .font-semibold {
     font-weight: 600;
 }

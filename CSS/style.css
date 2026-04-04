@@ -5,15 +5,17 @@
     --accent-rgb: 255, 61, 0;
     --accent-gradient: linear-gradient(135deg, #ff3d00 0%, #ff8a00 100%);
     --accent-glow: 0 0 20px rgba(255, 61, 0, 0.3);
+
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
+
     --bg-dark: #0a0a0a;
     --card-bg: rgba(255, 255, 255, 0.03);
 
-    /* Fluid Typography System */
+    /* Fluid Typography */
     --fs-h1: clamp(2.2rem, 6vw, 3.8rem);
-    --fs-h2: clamp(1.75rem, 5vw + 1rem, 3rem);
-    --fs-h3: clamp(1.25rem, 3vw + 1rem, 1.75rem);
+    --fs-h2: clamp(1.75rem, 4vw, 3rem);
+    --fs-h3: clamp(1.25rem, 3vw + 0.5rem, 1.75rem);
     --fs-body: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);
 }
 
@@ -37,19 +39,18 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/images/background-1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                      url("../assets/images/background-1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
 
-
-/* page transition */
-
-body {
+    /* Page animation */
     opacity: 0;
     transform: scale(1.02);
     transition: opacity .5s ease, transform .5s ease;
+
+    will-change: opacity, transform;
 }
 
 body.page-loaded {
@@ -62,11 +63,64 @@ body.page-exit {
     transform: scale(.98);
 }
 
-/* headings */
+/* ================= LAYERS ================= */
 
-h1,
-h2,
-h3 {
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+
+    will-change: transform;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.75) 80%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    padding: 14px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        padding: 24px;
+    }
+}
+
+/* Fix background on mobile */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+h1, h2, h3 {
     font-family: var(--font-heading);
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -90,47 +144,34 @@ h3 {
     line-height: 1.3;
 }
 
-/* background overlay */
+/* ================= LINKS & BUTTONS ================= */
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.63);
-    /* Restore original aesthetic */
-    z-index: -1;
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
-/* background video */
-
-.background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
+a:hover {
+    text-shadow: var(--accent-glow);
 }
 
-/* cinematic overlay */
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.733) 80%);
-    pointer-events: none;
-    z-index: -1;
+button {
+    background: var(--accent-gradient);
+    border: none;
+    color: #fff;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--accent-glow);
+}
 
-/* footer */
+/* ================= FOOTER ================= */
 
 footer {
     text-align: center;
@@ -144,7 +185,19 @@ footer {
     opacity: .4;
 }
 
-/* Utils migrated from legacy Tailwind */
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+/* ================= UTILITIES ================= */
+
 .text-center {
     text-align: center;
 }

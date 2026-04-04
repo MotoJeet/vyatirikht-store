@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cinematography Learning Tools - CineTorqueFilms</title>
+
+  <link rel="stylesheet" href="CSS/base.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/layout.css">
+  <link rel="stylesheet" href="CSS/CardNav.css">
+  <link rel="stylesheet" href="CSS/simulator.css">
+
+
+</head>
+
+<body>
+
+<div class="card-nav-container">
+  <nav class="card-nav" id="mainCardNav">
+    <div class="card-nav-top">
+      <a href="index.html" class="card-nav-logo">
+        <img src="assets/images/Hero-logo.png" alt="CineTorqueFilms Logo">
+      </a>
+      <!-- Home Icon Link -->
+      <a href="index.html" class="card-nav-home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </a>
+      <div class="card-nav-hamburger" id="cardNavToggle">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="card-nav-content" id="cardNavContent">
+      <div class="nav-card" style="background-color: #2a2a2a; color: #fff;">
+        <div class="nav-card-label">Work</div>
+        <div class="nav-card-links">
+          <a href="portfolio.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Portfolio
+          </a>
+          <a href="portfolio.html#cinematics" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Movies
+          </a>
+        </div>
+      </div>
+      <div class="nav-card" style="background-color: #333; color: #fff;">
+        <div class="nav-card-label">Learn</div>
+        <div class="nav-card-links">
+          <a href="tutorials.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Tutorials
+          </a>
+          <a href="camera-simulator.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Simulator
+          </a>
+          <a href="storyboard.html" class="nav-card-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Storyboard
+          </a>
+        </div>
+      </div>
+      <div class="nav-card" style="background-color: #d4af37; color: #000;">
+        <div class="nav-card-label">Community</div>
+        <div class="nav-card-links">
+          <a href="about.html" class="nav-card-link" style="color: #000;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            About Us
+          </a>
+          <a href="faq.html" class="nav-card-link" style="color: #000;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            FAQ
+          </a>
+          <a href="contact.html" class="nav-card-link" style="color: #000;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+  <section class="simulator-intro">
+    <h1>Cinematography Learning Tools</h1>
+    <p>An interactive film-school suite to help you understand the core mechanics of cameras, optics, and motion.</p>
+  </section>
+
+  <!-- 1. Exposure Lab -->
+  <section class="sim-lab">
+    <div class="lab-header">
+      <h2>Exposure Lab</h2>
+      <p>Understand the exposure triangle. Adjust the ISO, Aperture, and Shutter to see how the camera balances light.
+      </p>
+    </div>
+
+    <div class="simulator-layout">
+      <div class="sim-preview">
+        <img id="previewImage" src="assets/Cinematics/IMG-20251024-WA0094.jpg">
+        <div class="readout">
+          <div class="readout-item">
+            <span>ISO</span>
+            <strong id="isoValue">100</strong>
+          </div>
+          <div class="readout-item">
+            <span>Aperture</span>
+            <strong id="apertureValue">f/2.8</strong>
+          </div>
+          <div class="readout-item">
+            <span>Shutter</span>
+            <strong id="shutterValue">1/200</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="sim-controls">
+        <div class="control">
+          <label>ISO</label>
+          <input type="range" id="iso" min="100" max="6400" value="100">
+        </div>
+        <div class="control">
+          <label>Aperture</label>
+          <input type="range" id="aperture" min="1.4" max="16" step="0.1" value="2.8">
+        </div>
+        <div class="control">
+          <label>Shutter Speed</label>
+          <input type="range" id="shutter" min="10" max="1000" value="200">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Lens Perspective Simulator -->
+  <section class="sim-lab">
+    <div class="lab-header">
+      <h2>Lens Perspective Simulator</h2>
+      <p>Experience how focal length changes field of view and spatial compression. Select a focal length below.</p>
+    </div>
+
+    <div class="simulator-layout">
+      <div class="lens-preview-container">
+        <div class="lens-fov-box">
+          <img id="lensPreviewImage" src="assets/Cinematics/light-trail-2.jpeg">
+        </div>
+        <div class="lens-badge" id="lensBadge">35mm</div>
+      </div>
+
+      <div class="sim-controls toggle-controls">
+        <button class="lens-btn" data-focal="16">16mm Ultra Wide</button>
+        <button class="lens-btn active" data-focal="35">35mm Wide</button>
+        <button class="lens-btn" data-focal="50">50mm Standard</button>
+        <button class="lens-btn" data-focal="85">85mm Telephoto</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Depth of Field (DOF) Explorer -->
+  <section class="sim-lab dof-lab">
+    <div class="lab-header">
+      <h2>Depth of Field Explorer</h2>
+      <p>Adjust the aperture slider to see how f-stops control the focal plane. A wide aperture (f/1.4) isolates the
+        target, while a narrow aperture (f/16) brings everything into deep focus.</p>
+    </div>
+
+    <div class="simulator-layout">
+      <div class="dof-preview-container">
+        <div class="dof-scene">
+          <div class="dof-plane dof-bg-plane">Background Object</div>
+          <div class="dof-plane dof-mid-plane">Focus Target</div>
+          <div class="dof-plane dof-fg-plane">Foreground Object</div>
+        </div>
+
+        <div class="dof-badge">Aperture: <span id="dofApertureText">f/2.8</span></div>
+      </div>
+
+      <div class="sim-controls">
+        <div class="control">
+          <label>Aperture (f-stop)</label>
+          <input type="range" id="dofApertureSlider" min="1.4" max="16" step="0.1" value="2.8">
+        </div>
+        <p class="sim-tip">Slide left (f/1.4) for shallow focus (foreground and background blurred), slide right (f/16)
+          for deep focus (all planes sharp).</p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>CineTorqueFilms © 2026</p>
+    <p class="credits">Website designed & developed by Jitendra Kulkarni</p>
+  </footer>
+
+    <!-- GSAP Core and ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="JS/SplitText.js"></script>
+  <script src="JS/ClickSpark.js"></script>
+  <script src="JS/simulator.js"></script>
+  <script src="JS/script.js"></script>
+
+</body>
+
+</html>

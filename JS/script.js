@@ -456,5 +456,28 @@ function initCommentary() {
                 commentaryOverlay.classList.add("hidden");
             }});
         }
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar-container").innerHTML = data
+
+    // After loading, attach events
+    initNavbar()
+  })
+
+
+function initNavbar(){
+
+  const toggle = document.getElementById("cardNavToggle")
+  const content = document.getElementById("cardNavContent")
+
+  if(toggle){
+    toggle.addEventListener("click", () => {
+      content.classList.toggle("active")
+      toggle.classList.toggle("active")
+    })
+  }
+
+}
     });
 }

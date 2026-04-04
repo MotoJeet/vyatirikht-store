@@ -19,71 +19,96 @@
 <body>
 
 <div class="card-nav-container">
-  <nav class="card-nav" id="mainCardNav">
-    <div class="card-nav-top">
-      <a href="index.html" class="card-nav-logo">
-        <img src="assets/images/Logo-Black.png" alt="CineTorqueFilms Logo">
-      </a>
-      <!-- Home Icon Link -->
-      <a href="index.html" class="card-nav-home">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      </a>
-      <div class="card-nav-hamburger" id="cardNavToggle">
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
-    <div class="card-nav-content" id="cardNavContent">
-      <div class="nav-card" style="background-color: #2a2a2a; color: #fff;">
-        <div class="nav-card-label">Work</div>
-        <div class="nav-card-links">
-          <a href="portfolio.html" class="nav-card-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            Portfolio
-          </a>
-          <a href="portfolio.html#cinematics" class="nav-card-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            Movies
-          </a>
+    <nav class="card-nav" id="mainCardNav">
+      <div class="card-nav-top">
+        <a href="index.html" class="card-nav-logo">
+          <img src="assets/images/1.png" alt="CineTorqueFilms Logo">
+        </a>
+        <!-- Home Icon Link (hidden on index) -->
+        <a href="index.html" class="card-nav-home" style="display: none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+        </a>
+        <div class="card-nav-hamburger" id="cardNavToggle">
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
       </div>
-      <div class="nav-card" style="background-color: #333; color: #fff;">
-        <div class="nav-card-label">Learn</div>
-        <div class="nav-card-links">
-          <a href="tutorials.html" class="nav-card-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            Tutorials
-          </a>
-          <a href="camera-simulator.html" class="nav-card-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            Simulator
-          </a>
-          <a href="storyboard.html" class="nav-card-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            Storyboard
-          </a>
+      <div class="card-nav-content" id="cardNavContent">
+        <div class="nav-card" style="background-color: #2a2a2a; color: #fff;">
+          <div class="nav-card-label">Work</div>
+          <div class="nav-card-links">
+            <a href="portfolio.html" class="nav-card-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              Portfolio
+            </a>
+            <a href="blog.html" class="nav-card-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              Blog
+            </a>
+            <a href="blog.html" class="nav-card-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              Movies
+            </a>
+          </div>
+        </div>
+        <div class="nav-card" style="background-color: #333; color: #fff;">
+          <div class="nav-card-label">Learn</div>
+          <div class="nav-card-links">
+            <a href="tutorials.html" class="nav-card-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              Tutorials
+            </a>
+            <a href="camera-simulator.html" class="nav-card-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              Simulator
+            </a>
+            <a href="storyboard.html" class="nav-card-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              Storyboard
+            </a>
+          </div>
+        </div>
+        <div class="nav-card" style="background-color: #d4af37; color: #000;">
+          <div class="nav-card-label">Community</div>
+          <div class="nav-card-links">
+            <a href="about.html" class="nav-card-link" style="color: #000;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              About Us
+            </a>
+            <a href="faq.html" class="nav-card-link" style="color: #000;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              FAQ
+            </a>
+            <a href="contact.html" class="nav-card-link" style="color: #000;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+              Contact
+            </a>
+          </div>
         </div>
       </div>
-      <div class="nav-card" style="background-color: #d4af37; color: #000;">
-        <div class="nav-card-label">Community</div>
-        <div class="nav-card-links">
-          <a href="about.html" class="nav-card-link" style="color: #000;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            About Us
-          </a>
-          <a href="faq.html" class="nav-card-link" style="color: #000;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            FAQ
-          </a>
-          <a href="contact.html" class="nav-card-link" style="color: #000;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            Contact
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
 
 
 <section class="feedback-page">

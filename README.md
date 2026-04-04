@@ -1,1 +1,1 @@
-# vyatirikht-store
+# vyatirikht

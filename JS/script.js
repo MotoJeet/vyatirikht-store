@@ -1,5 +1,4 @@
 
-
 window.addEventListener("scroll", function(){
 
 let scroll = window.scrollY
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heroHeading && window.SplitTextEffect) {
         window.SplitTextEffect({
             element: heroHeading,
-            text: "CineTorque Films",
+            text: "vyatirikht",
             className: "text-2xl font-semibold text-center",
             delay: 50,
             duration: 1.25,
@@ -456,3 +455,5 @@ function initCommentary() {
                 commentaryOverlay.classList.add("hidden");
             }});
         }
+    });
+}

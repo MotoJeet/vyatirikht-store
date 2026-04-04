@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Blog - CineTorqueFilms</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== BLOG PAGE FIXES ===== */
+
+.blog-page{
+position:relative;
+z-index:2;
+padding-top:140px;
+max-width:1200px;
+margin:auto;
+text-align:center;
+}
+
+.blog-intro{
+opacity:.7;
+margin-bottom:60px;
+}
+
+/* Featured */
+
+.featured-post{
+position:relative;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:80px;
+cursor:pointer;
+}
+
+.featured-post img{
+width:100%;
+display:block;
+transition:transform .5s ease;
+}
+
+.featured-post:hover img{
+transform:scale(1.05);
+}
+
+.overlay-info{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:30px;
+background:linear-gradient(transparent, rgba(0,0,0,.9));
+text-align:left;
+}
+
+.overlay-info h2{
+margin-bottom:10px;
+}
+
+/* Grid */
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:20px;
+}
+
+.blog-card{
+position:relative;
+border-radius:18px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.blog-card img{
+width:100%;
+display:block;
+transition:transform .4s ease;
+}
+
+.blog-card:hover img{
+transform:scale(1.08);
+}
+
+.blog-card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 40px rgba(255,80,120,.3);
+}
+
+.blog-card .overlay-info{
+padding:20px;
+}
+
+/* Safety overrides (IMPORTANT) */
+
+section{
+opacity:1 !important;
+transform:none !important;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<a href="index.html" class="logo">
+<img src="assets/images/Hero-logo.png" alt="CineTorqueFilms">
+</a>
+
+<nav>
+<a href="portfolio.html">Portfolio</a>
+<a href="tutorials.html">Tutorials</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="blog-page">
+
+<h1>Insights & Stories</h1>
+
+<p class="blog-intro">
+Thoughts on filmmaking, motion, and cinematic storytelling.
+</p>
+
+
+<!-- FEATURED POST -->
+
+<div class="featured-post">
+
+<img src="assets/images/blog1.jpg" alt="Featured">
+
+<div class="overlay-info">
+<h2>How I Shoot Cinematic Motorcycle Videos</h2>
+<p>Breaking down my workflow, gear, and shooting style.</p>
+</div>
+
+</div>
+
+
+<!-- BLOG GRID -->
+
+<div class="blog-grid">
+
+<a href="#" class="blog-card">
+<img src="assets/images/blog2.jpg">
+<div class="overlay-info">
+<h3>Understanding Motion Blur</h3>
+<p>Why shutter speed matters.</p>
+</div>
+</a>
+
+<a href="#" class="blog-card">
+<img src="assets/images/blog3.jpg">
+<div class="overlay-info">
+<h3>My Editing Workflow</h3>
+<p>From raw to cinematic.</p>
+</div>
+</a>
+
+<a href="#" class="blog-card">
+<img src="assets/images/blog4.jpg">
+<div class="overlay-info">
+<h3>Choosing the Right Lens</h3>
+<p>How focal length affects story.</p>
+</div>
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>CineTorqueFilms © 2026</p>
+<p class="credits">Website designed & developed by Jitendra Kulkarni</p>
+
+</footer>
+
+</body>
+</html>

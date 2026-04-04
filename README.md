@@ -11,7 +11,7 @@ Built with a focus on atmosphere, motion, and immersive design.
 
 ## 🚀 Live Preview
 
-Coming soon...
+https://www.vyatirikht.xyz
 
 ---
 

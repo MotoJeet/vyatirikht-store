@@ -42,6 +42,7 @@ text-align:center;
 .blog-page h1{
 font-size:48px;
 margin-bottom:10px;
+  text-align:center;
 }
 
 .blog-intro{
@@ -63,7 +64,7 @@ cursor:pointer;
 }
 
 .featured-post img{
-width:70%;
+width:60%;
 transition:all .6s ease;
 will-change:transform;
 margin:auto;
@@ -154,7 +155,7 @@ background:linear-gradient(transparent, rgba(0,0,0,.9));
 transform:translateY(100%);
 opacity:0;
 transition:.4s ease;
-text-align:left;
+text-align:center;
 }
 
 /* show on hover */

@@ -190,3 +190,18 @@ font-size: 2rem;
 }
 
 }
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.blog-card:hover .read-more {
+  opacity: 1;
+  transform: translateX(5px);
+}
+

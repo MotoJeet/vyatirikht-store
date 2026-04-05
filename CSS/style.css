@@ -268,3 +268,15 @@ transform:translate(-50%,-50%);
 pointer-events:none;
 z-index:2;
 }
+
+@media (max-width:768px){
+
+.background-video iframe{
+display:none;
+}
+
+.yt-thumb{
+opacity:1;
+}
+
+}

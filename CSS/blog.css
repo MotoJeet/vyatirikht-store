@@ -66,6 +66,7 @@ cursor:pointer;
 width:100%;
 transition:all .6s ease;
 will-change:transform;
+margin:auto;
 }
 
 .featured-post:hover img{

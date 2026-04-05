@@ -457,3 +457,12 @@ function initCommentary() {
         }
     });
 }
+
+const iframe = document.querySelector(".background-video iframe")
+const thumb = document.querySelector(".yt-thumb")
+
+iframe.addEventListener("load", () => {
+  setTimeout(() => {
+    thumb.style.opacity = "0"
+  }, 800)
+})

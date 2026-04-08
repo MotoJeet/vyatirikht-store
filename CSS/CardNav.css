@@ -297,3 +297,44 @@
     transform: none;
   }
 }
+
+/* ================= NAV POSITION FIX ================= */
+
+.card-nav-container {
+  top: 20px;
+}
+
+/* ================= NAV SMOOTHNESS ================= */
+
+.card-nav {
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ================= NAV CONTENT ANIMATION ================= */
+
+.card-nav-content {
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-nav.open .card-nav-content {
+  transform: translateY(0);
+}
+
+/* ================= HAMBURGER SMOOTH ================= */
+
+.card-nav-hamburger {
+  transition: transform 0.2s ease;
+}
+
+.card-nav-hamburger:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width:768px) {
+  .card-nav-container {
+    top: 10px;
+  }
+}

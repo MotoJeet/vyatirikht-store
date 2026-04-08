@@ -1,4 +1,3 @@
-
 /* ================= NAV CONTAINER ================= */
 
 .card-nav-container {
@@ -29,6 +28,7 @@
     inset 0 0 20px rgba(255,255,255,0.02);
 
   overflow: visible;
+  z-index: 10000;
 
   transition: all 0.4s ease;
 }
@@ -63,9 +63,11 @@
 
 .card-nav-top {
   height: 60px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 0 1.5rem;
 }
 
@@ -88,7 +90,6 @@
 
   gap: 5px;
   cursor: pointer;
-  z-index: 20;
 }
 
 .card-nav-hamburger .line {
@@ -130,7 +131,7 @@
   pointer-events: none;
   visibility: hidden;
 
-  z-index: 10000;
+  z-index: 10001;
 
   transition: all 0.3s ease;
 }
@@ -197,8 +198,10 @@
 .nav-card-label {
   font-family: var(--font-heading);
   font-size: 0.85rem;
+
   letter-spacing: 1px;
   margin-bottom: 1rem;
+
   color: rgba(255,255,255,0.8);
 }
 
@@ -219,8 +222,6 @@
   font-size: 0.9rem;
 
   color: rgba(255,255,255,0.8);
-
-  pointer-events: auto;
 
   transition: all 0.25s ease;
 }
@@ -253,4 +254,17 @@
   .nav-card {
     padding: 1rem;
   }
+}
+
+/* ================= SAFETY FIX ================= */
+
+.card-nav-content a {
+  pointer-events: auto;
+}
+
+/* prevent background blocking */
+
+.overlay,
+.background-video {
+  pointer-events: none;
 }

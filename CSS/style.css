@@ -59,26 +59,54 @@ body {
 
 /* ================= TYPOGRAPHY ================= */
 
-h1, h2 {
+/* ================= TYPOGRAPHY ================= */
+
+h1, h2, h3 {
   font-family: var(--font-heading);
   text-transform: uppercase;
 }
 
+/* HERO HEADLINE */
+
 h1 {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 1.1;
+  line-height: 1.05;
+  letter-spacing: -1px;
 
-  background: linear-gradient(180deg, #fff, #bbb);
+  background: linear-gradient(180deg, #ffffff 0%, #aaaaaa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   text-shadow: 0 0 60px rgba(255, 61, 0, 0.15);
 }
 
-h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+/* SECTION HEADINGS */
+
+.section h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: 1px;
+
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
+/* CARD HEADINGS */
+
+.card h3 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* BODY TEXT */
+
+p {
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  font-weight: 400;
+}
 /* ================= HERO ================= */
 
 .hero {
@@ -300,4 +328,46 @@ h2 {
 .section p {
   font-size: 0.95rem;
   opacity: 0.7;
+}
+
+.accent {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(255,61,0,0.4);
+}
+
+.section h2 {
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 10px auto 0;
+
+  background: var(--accent-gradient);
+  opacity: 0.6;
+}
+
+.buttons a {
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.buttons a:nth-child(2) {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.buttons a:nth-child(2):hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.card h3 {
+  transition: all 0.3s ease;
+}
+
+.card:hover h3 {
+  color: var(--accent-color);
 }

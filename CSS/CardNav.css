@@ -1,67 +1,52 @@
-/* ================= NAV CONTAINER ================= */
+/* ================= CARD NAV CONTAINER ================= */
 
 .card-nav-container {
   position: fixed;
-  top: 20px;
+  top: 3.5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 1000px;
-  z-index: 9999;
+  max-width: 900px;
+  z-index: 3000;
+  box-sizing: border-box;
 }
 
-/* ================= NAV BASE ================= */
+/* ================= MAIN NAV ================= */
 
 .card-nav {
-  position: relative;
-  width: 100%;
+  display: block;
   height: 60px;
 
-  background: rgba(15, 15, 15, 0.65);
-  backdrop-filter: blur(25px) saturate(120%);
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(18px);
 
-  border-radius: 1.2rem;
   border: 1px solid rgba(255, 61, 0, 0.12);
+  border-radius: 1.25rem;
 
   box-shadow:
-    0 10px 40px rgba(0,0,0,0.6),
-    inset 0 0 20px rgba(255,255,255,0.02);
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 61, 0, 0.03);
 
-  overflow: visible;
-  z-index: 10000;
+  position: relative;
+  overflow: hidden;
 
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
+
+/* Open State */
 
 .card-nav.open {
-  border: 1px solid rgba(255, 61, 0, 0.35);
+  border-color: rgba(255, 61, 0, 0.35);
   box-shadow:
     0 20px 60px rgba(0,0,0,0.7),
-    0 0 30px rgba(255,61,0,0.15);
-}
-
-/* ================= GLOW LINE ================= */
-
-.card-nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 1px;
-
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(255,61,0,0.6),
-    transparent
-  );
-
-  opacity: 0.6;
+    0 0 25px rgba(255,61,0,0.08);
 }
 
 /* ================= TOP BAR ================= */
 
 .card-nav-top {
+  position: absolute;
+  inset: 0 0 auto 0;
   height: 60px;
 
   display: flex;
@@ -69,140 +54,134 @@
   justify-content: space-between;
 
   padding: 0 1.5rem;
+  z-index: 2;
 }
 
 /* ================= LOGO ================= */
 
+.card-nav-logo {
+  display: flex;
+  align-items: center;
+}
+
 .card-nav-logo img {
-  height: 36px;
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-nav-logo:hover img {
+  transform: scale(1.05);
 }
 
 /* ================= HAMBURGER ================= */
 
 .card-nav-hamburger {
-  width: 40px;
   height: 40px;
+  width: 40px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  gap: 5px;
   cursor: pointer;
+  gap: 5px;
 }
+
+/* Lines */
 
 .card-nav-hamburger .line {
   width: 24px;
-  height: 2px;
-  background: #fff;
-  transition: all 0.3s ease;
+  height: 1.5px;
+  background: linear-gradient(90deg, #fff, var(--accent-color));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Open Animation */
+
 .card-nav.open .line:first-child {
-  transform: translateY(4px) rotate(45deg);
+  transform: translateY(3.25px) rotate(45deg);
 }
 
 .card-nav.open .line:last-child {
-  transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-3.25px) rotate(-45deg);
 }
 
-.card-nav-hamburger:hover .line {
-  background: var(--accent-color);
-  box-shadow: 0 0 8px rgba(255,61,0,0.6);
-}
-
-/* ================= DROPDOWN ================= */
+/* ================= CONTENT ================= */
 
 .card-nav-content {
   position: absolute;
-  top: 60px;
   left: 0;
   right: 0;
+  top: 60px;
 
-  padding: 1.2rem;
+  padding: 1rem;
 
   display: flex;
   gap: 1rem;
 
   opacity: 0;
-  transform: translateY(-10px);
-
   pointer-events: none;
-  visibility: hidden;
-
-  z-index: 10001;
-
-  transition: all 0.3s ease;
+  z-index: 1;
 }
-
-/* WHEN OPEN */
 
 .card-nav.open .card-nav-content {
   opacity: 1;
-  transform: translateY(0);
-
   pointer-events: auto;
-  visibility: visible;
 }
 
 /* ================= NAV CARDS ================= */
 
 .nav-card {
   flex: 1;
+  min-width: 0;
 
-  background: rgba(255,255,255,0.04);
-  border-radius: 14px;
-
-  padding: 1.5rem;
-
-  backdrop-filter: blur(12px);
-
-  border: 1px solid rgba(255,255,255,0.06);
-
-  transition: all 0.35s ease;
-
-  position: relative;
-  overflow: hidden;
-}
-
-/* Light sweep */
-
-.nav-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(120deg,
-    transparent,
-    rgba(255,255,255,0.06),
-    transparent
+  background: linear-gradient(
+    145deg,
+    rgba(30,30,30,0.6),
+    rgba(15,15,15,0.8)
   );
 
-  opacity: 0;
-  transition: 0.5s;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 0.75rem;
+
+  padding: 1.5rem;
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.3s ease;
 }
 
-.nav-card:hover::after {
-  opacity: 1;
-}
+/* Hover */
 
 .nav-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255,61,0,0.25);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background: linear-gradient(
+    145deg,
+    rgba(40,40,40,0.8),
+    rgba(20,20,20,0.9)
+  );
+
+  border-color: rgba(255, 61, 0, 0.25);
+
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* ================= LABEL ================= */
 
 .nav-card-label {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 
-  letter-spacing: 1px;
+  opacity: 0.6;
   margin-bottom: 1rem;
-
-  color: rgba(255,255,255,0.8);
 }
 
 /* ================= LINKS ================= */
@@ -214,27 +193,62 @@
 }
 
 .nav-card-link {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+
+  font-size: 0.95rem;
+
   display: flex;
   align-items: center;
-  gap: 8px;
-
-  text-decoration: none;
-  font-size: 0.9rem;
-
-  color: rgba(255,255,255,0.8);
+  gap: 0.5rem;
 
   transition: all 0.25s ease;
 }
 
+/* Hover */
+
+.nav-card-link:hover {
+  color: var(--accent-color);
+  transform: translateX(6px);
+  text-shadow: var(--accent-glow);
+}
+
+/* Icon */
+
 .nav-card-link svg {
   width: 14px;
   height: 14px;
+  transition: transform 0.3s ease;
 }
 
-.nav-card-link:hover {
+.nav-card-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ================= HOME ICON ================= */
+
+.card-nav-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fff;
-  transform: translateX(6px);
-  text-shadow: 0 0 10px rgba(255,61,0,0.6);
+
+  padding: 8px;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: all 0.3s ease;
+}
+
+.card-nav-home:hover {
+  background: var(--accent-gradient);
+  border-color: transparent;
+
+  transform: translateY(-2px);
+  box-shadow: var(--accent-glow);
 }
 
 /* ================= MOBILE ================= */
@@ -243,34 +257,16 @@
 
   .card-nav-container {
     width: 95%;
-    top: 10px;
+    top: 1rem;
   }
 
   .card-nav-content {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.75rem;
   }
 
   .nav-card {
+    min-height: auto;
     padding: 1rem;
   }
-}
-
-/* ================= SAFETY FIX ================= */
-
-.card-nav-content a {
-  pointer-events: auto;
-}
-
-/* prevent background blocking */
-
-.overlay,
-.background-video {
-  pointer-events: none;
-}
-
-.card-nav {
-  height: 60px;
-  overflow: hidden;
-  transition: height 0.4s ease;
 }

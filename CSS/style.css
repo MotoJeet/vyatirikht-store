@@ -370,4 +370,24 @@ p {
 
 .card:hover h3 {
   color: var(--accent-color);
+
+  /* visual strip cards */
+
+.section.grid .card {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+}
+
+/* quote section */
+
+.section h2 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section p {
+  margin-top: 10px;
+}
 }

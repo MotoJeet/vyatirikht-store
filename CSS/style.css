@@ -44,17 +44,17 @@ body {
   object-fit: cover;
 
   z-index: -3;
-  pointer-events: none;
-
-  filter: brightness(0.6) contrast(1.1);
+  pointer-events: none; /* 🔥 THIS FIXES CLICK ISSUE */
 }
 
 .overlay {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 80%);
+
+  background: radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+
   z-index: -2;
-  pointer-events: none;
+  pointer-events: none; /* 🔥 IMPORTANT */
 }
 
 /* ================= TYPOGRAPHY ================= */

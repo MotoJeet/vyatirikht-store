@@ -399,3 +399,49 @@ p {
   background: transparent;
 }  
 }
+
+
+/* ================= LEARNING SECTION ================= */
+
+.learning-sub {
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.learning-flow {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* learning cards */
+
+.learning-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* step number */
+
+.learning-card .step {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  font-size: 0.8rem;
+  opacity: 0.3;
+  font-weight: 600;
+}
+
+/* hover upgrade */
+
+.learning-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* glow accent */
+
+.learning-card:hover h3 {
+  color: var(--accent-color);
+}

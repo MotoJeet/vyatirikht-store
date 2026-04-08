@@ -390,4 +390,12 @@ p {
 .section p {
   margin-top: 10px;
 }
+
+.section:nth-child(odd){
+  background: rgba(255,255,255,0.02);
+}
+
+.section:nth-child(even){
+  background: transparent;
+}  
 }

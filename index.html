@@ -57,9 +57,9 @@
   </header>
 
   <!-- ================= BACKGROUND ================= -->
-  <div class="background-video" id="videoContainer">
-    <img src="https://img.youtube.com/vi/UJa80UPjREU/hqdefault.jpg" class="yt-thumb" alt="Background thumbnail">
-  </div>
+  <video class="background-video" autoplay muted loop playsinline>
+    <source src="assets/videos/bg.mp4.mp4" type="video/mp4">
+  </video>
 
   <div class="overlay"></div>
 
@@ -75,6 +75,7 @@
         <a href="portfolio.html">View Work</a>
         <a href="contact.html">Let's Talk</a>
       </div>
+
       <div class="scroll-indicator"></div>
     </section>
 
@@ -118,39 +119,26 @@
       });
     }
 
-    // ===== VIDEO LOAD =====
-    const container = document.getElementById("videoContainer");
-
-    if (container) {
-      setTimeout(() => {
-        const iframe = document.createElement("iframe");
-        iframe.src = "https://www.youtube.com/embed/UJa80UPjREU?autoplay=1&mute=1&loop=1&playlist=UJa80UPjREU&controls=0";
-        iframe.frameBorder = "0";
-        iframe.allow = "autoplay";
-        container.appendChild(iframe);
-      }, 1200);
-    }
-
     // ===== HERO ANIMATION =====
     if (window.gsap) {
       gsap.from(".hero h1", { y: 80, opacity: 0, duration: 1.2 });
       gsap.from(".hero p", { y: 40, opacity: 0, delay: 0.4 });
       gsap.from(".buttons a", { y: 20, opacity: 0, delay: 0.8, stagger: 0.2 });
     }
+
+    // ===== SCROLL REVEAL =====
+    const sections = document.querySelectorAll(".section");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    sections.forEach(section => observer.observe(section));
   </script>
-<script>
-const sections = document.querySelectorAll(".section");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-sections.forEach(section => observer.observe(section));
-</script>
-  
 </body>
 </html>

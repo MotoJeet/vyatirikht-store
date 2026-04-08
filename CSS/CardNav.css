@@ -338,3 +338,9 @@
     top: 10px;
   }
 }
+
+.card-nav {
+  height: 60px;
+  transition: height 0.4s ease;
+  overflow: hidden;
+}

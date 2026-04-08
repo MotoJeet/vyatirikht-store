@@ -6,11 +6,9 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-
   width: 90%;
   max-width: 1000px;
-
-  z-index: 3000;
+  z-index: 9999;
 }
 
 /* ================= NAV BASE ================= */
@@ -42,7 +40,7 @@
     0 0 30px rgba(255,61,0,0.15);
 }
 
-/* Glow top line */
+/* ================= GLOW LINE ================= */
 
 .card-nav::before {
   content: "";
@@ -65,11 +63,9 @@
 
 .card-nav-top {
   height: 60px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 1.5rem;
 }
 
@@ -92,6 +88,7 @@
 
   gap: 5px;
   cursor: pointer;
+  z-index: 20;
 }
 
 .card-nav-hamburger .line {
@@ -108,8 +105,6 @@
 .card-nav.open .line:last-child {
   transform: translateY(-4px) rotate(-45deg);
 }
-
-/* Glow on hover */
 
 .card-nav-hamburger:hover .line {
   background: var(--accent-color);
@@ -131,15 +126,23 @@
 
   opacity: 0;
   transform: translateY(-10px);
+
   pointer-events: none;
+  visibility: hidden;
+
+  z-index: 50;
 
   transition: all 0.3s ease;
 }
 
+/* WHEN OPEN */
+
 .card-nav.open .card-nav-content {
   opacity: 1;
   transform: translateY(0);
+
   pointer-events: auto;
+  visibility: visible;
 }
 
 /* ================= NAV CARDS ================= */
@@ -162,7 +165,7 @@
   overflow: hidden;
 }
 
-/* Light sweep effect */
+/* Light sweep */
 
 .nav-card::after {
   content: "";
@@ -194,10 +197,8 @@
 .nav-card-label {
   font-family: var(--font-heading);
   font-size: 0.85rem;
-
   letter-spacing: 1px;
   margin-bottom: 1rem;
-
   color: rgba(255,255,255,0.8);
 }
 
@@ -217,7 +218,9 @@
   text-decoration: none;
   font-size: 0.9rem;
 
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.8);
+
+  pointer-events: auto;
 
   transition: all 0.25s ease;
 }
@@ -230,7 +233,6 @@
 .nav-card-link:hover {
   color: #fff;
   transform: translateX(6px);
-
   text-shadow: 0 0 10px rgba(255,61,0,0.6);
 }
 

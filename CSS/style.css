@@ -272,3 +272,17 @@ h2 {
     padding: 60px 20px;
   }
 }
+
+.card h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.section p {
+  line-height: 1.6;
+}

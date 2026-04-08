@@ -6,21 +6,27 @@ const content = document.querySelector(".card-nav-content");
 
 if (nav && toggle && content) {
 
-  let isOpen = false;
-
   toggle.addEventListener("click", () => {
-    isOpen = !isOpen;
 
     nav.classList.toggle("open");
 
-    if (isOpen) {
-      nav.style.height = content.scrollHeight + 80 + "px";
+    if (nav.classList.contains("open")) {
+      
+      // TEMP show to calculate height
+      content.style.visibility = "visible";
+      content.style.opacity = "1";
+
+      const height = content.scrollHeight;
+
+      nav.style.height = height + 60 + "px";
+
     } else {
       nav.style.height = "60px";
     }
-  });
-}
 
+  });
+
+}
   /* ===== HERO ANIMATION ===== */
   if (window.gsap) {
     gsap.from(".hero h1", {

@@ -1,14 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===== NAV TOGGLE ===== */
-  const nav = document.getElementById("mainCardNav");
-  const toggle = document.getElementById("cardNavToggle");
+const nav = document.getElementById("mainCardNav");
+const toggle = document.getElementById("cardNavToggle");
+const content = document.querySelector(".card-nav-content");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-    });
-  }
+if (nav && toggle && content) {
+
+  let isOpen = false;
+
+  toggle.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    nav.classList.toggle("open");
+
+    if (isOpen) {
+      nav.style.height = content.scrollHeight + 80 + "px";
+    } else {
+      nav.style.height = "60px";
+    }
+  });
+}
 
   /* ===== HERO ANIMATION ===== */
   if (window.gsap) {

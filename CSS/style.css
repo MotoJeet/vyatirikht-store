@@ -205,3 +205,16 @@ h2 {
     padding: 60px 20px;
   }
 }
+
+.hero h1 {
+    background: linear-gradient(180deg, #ffffff, #bbbbbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 60px rgba(255, 61, 0, 0.15);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}

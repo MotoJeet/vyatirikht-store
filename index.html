@@ -138,6 +138,19 @@
       gsap.from(".buttons a", { y: 20, opacity: 0, delay: 0.8, stagger: 0.2 });
     }
   </script>
+<script>
+const sections = document.querySelectorAll(".section");
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+sections.forEach(section => observer.observe(section));
+</script>
+  
 </body>
 </html>

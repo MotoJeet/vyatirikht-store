@@ -416,3 +416,29 @@ footer {
   }
 
 }
+
+/* ===== FIX: CONTENT ABOVE BACKGROUND ===== */
+
+.hero,
+.section {
+  position: relative;
+  z-index: 5;
+}
+
+/* ===== FIX: SECTIONS VISIBILITY ===== */
+
+.section {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+}
+
+/* ===== FIX: HERO CENTER ===== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

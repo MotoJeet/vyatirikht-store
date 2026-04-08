@@ -218,3 +218,88 @@ h2 {
     font-size: 1.1rem;
     letter-spacing: 0.5px;
 }
+
+.scroll-indicator {
+    margin-top: 60px;
+    width: 20px;
+    height: 35px;
+
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 20px;
+
+    position: relative;
+}
+
+.scroll-indicator::after {
+    content: "";
+    width: 4px;
+    height: 8px;
+    background: white;
+
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 2px;
+
+    animation: scrollMove 1.5s infinite;
+}
+
+@keyframes scrollMove {
+    0% { opacity: 0; transform: translate(-50%, 0); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, 10px); }
+}
+
+.section {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.05), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.buttons a {
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.1);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.buttons a:hover::after {
+    opacity: 1;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
